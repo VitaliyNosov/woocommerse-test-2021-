@@ -233,7 +233,20 @@ header {
   cursor: pointer;
 }
 
-.button__singup {
+/* стили для кнопок меню */
+
+.menu-sing-up-container{
+  display: flex !important;
+}
+
+.button__singup{
+  display: flex;
+}
+/* стили для кнопок меню */
+
+.button__singup a {
+  display: flex;
+  text-decoration: none;
   background-color: #9B44FF;
   color: #fff;
   border: none;
@@ -243,9 +256,11 @@ header {
   font-size: 14px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  margin: 10px;
 }
 
-.button__singup:hover {
+.button__singup a:hover {
+  text-decoration: none;
   background-color: #EFE2FD;
   color: #9B44FF;
   cursor: pointer;
@@ -823,6 +838,7 @@ pre {
   }
 }
 
+
 @media (max-width: 767px) {
   .container {
     max-width: none;
@@ -984,7 +1000,7 @@ pre {
   /* background: url("https://img.icons8.com/pastel-glyph/2x/shopping-cart--v2.png"); */
   /* width: 16px; */
   /* height: 16px; */
-  
+
   font-size: 14px;
   background-position: center;
   background-size: cover;
@@ -1018,3 +1034,90 @@ pre {
   background-color: #9B44FF ;
 }
 
+
+/* Стили для регистрации пользователей */
+
+
+.wplb_holder {
+	padding: 20px;
+	box-shadow: 0px 0px 40px rgba(0,0,0,0.1);
+}
+.wplb_flex {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	border-radius: 5px;
+}
+.wplb_flex > div {
+	width: 45%
+}
+.wplb_flex > div:not(.wplb_flex) input:not([type="submit"]) {
+	padding: 7px 12px;
+	margin-bottom: 20px;
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	border-radius: 3px;
+	font-size: 12px;
+	border: 1px solid #eaeaea;
+	background: #fff;
+}
+.wplb_heading {
+	font-size: 20px;
+	border-bottom: 1px solid #eaeaea;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+.wplb_holder input[type="submit"] {
+	padding: 10px 15px;
+	background: #fff;
+	color: #61ce70;
+	border-radius: 3px;
+	border: 1px solid #61ce70;
+	font-size: 14px;
+}
+.wplb_holder label {
+	display: block;
+	margin-bottom: 7px;
+	font-size: 13px;
+}
+.wplb_alert {
+	position: relative;
+	padding: .75rem 1.25rem;
+	margin-bottom: 1rem;
+	border: 1px solid transparent;
+	border-radius: .25rem;
+	display: none;
+	margin-top: 20px;
+	font-size: 12px;
+}
+.wplb_alert_error{
+	color: #721c24;
+	background-color: #f8d7da;
+	border-color: #f5c6cb;
+}
+.wplb_signon {
+	color: #155724;
+	background-color: #d4edda;
+	border-color: #c3e6cb;
+	box-shadow: none;
+	display: block;
+}
+.wplb_loading {
+	animation: pulse 0.3s infinite;
+	display: none;
+	font-size: 12px;
+}
+@keyframes pulse {
+	0% {
+	color: #eaeaea;
+	}
+	100% {
+	color: #000;
+	}
+}
+
+.sing-up-block{
+  margin-top: 100px;
+  margin-bottom: 150px;
+}

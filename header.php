@@ -60,9 +60,16 @@
                             <a href="">Jobs</a>
                         </div> -->
                     </div>
+                        
                     <div class="button__block">
-                        <button class="button__login">Login</button>
-                        <button class="button__singup">Sing up</button>
+                        <?php
+			                wp_nav_menu( array(
+				            'theme_location' => 'sing-up',
+				            'menu_class' => 'button__singup'
+			                ));
+		                ?>
+                        <!-- <button class="button__login">Login</button> -->
+                        <!-- <button class="button__singup">Sing up</button> -->
                     </div>
                 </div>
             </div>
