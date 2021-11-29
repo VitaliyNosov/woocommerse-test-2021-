@@ -1,0 +1,118 @@
+// Контейнер с товарами
+
+.products
+    border: 1px solid red
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+// Контейнер одиночного товара
+
+.product 
+    // width: 22%
+    border: 2px solid #71B738
+    position: relative
+    margin-bottom: 40px
+    padding: 10px
+    border-radius: 5px
+    &:hover
+        text-decoration: none
+
+// Изображение товара
+
+.attachment-woocommerce_thumbnail
+    max-width: 100%
+    height: 300px
+    border-radius: 5px
+
+// Вывод сообщения: Распродажа
+
+.onsale 
+    background-color: red
+    color: #fff
+    padding: 0px 5px 0px 5px
+    position: absolute 
+
+// Просомтрт корзины
+
+.added_to_cart
+    max-width: 80px
+    min-height: 40px
+    display: flex
+    padding: 10px
+    justify-content: center
+    align-items: center
+    font-size: 12px
+    flex-wrap: wrap
+    text-align: center
+    color: #ffff
+    background-color: #71B738
+    border-top-right-radius: 5%
+    position: absolute
+    top: 2%
+    right: 3%
+    &:hover
+        color: #fff 
+        text-decoration: none
+
+// Название товара
+
+.woocommerce-loop-product__title
+    text-align: center
+    font-size: 20px
+    margin: 10px 0px 10px 0px
+    color: black
+  
+
+// Цена
+
+.price
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    margin-bottom: 20px
+    font-size: 25px
+    font-weight: bold
+    color: #AB304A 
+
+// Кнопка в корзину
+
+.add_to_cart_button
+    width: 70%
+    height: 40px
+    margin-top: 20px
+    margin: 0 auto
+    background-color: #71B738
+    color: #fff
+    display: flex
+    justify-content: center
+    align-items: center
+    bottom: 2%
+    &:hover 
+        text-decoration: none 
+        color: #fff
+
+// Кнопка купить товар в магазине WordPress
+
+.product_type_external
+    width: 70%
+    min-height: 40px
+    margin-top: 20px
+    margin: 0 auto
+    background-color: #71B738
+    color: #fff
+    text-align: center
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+    bottom: 2%
+    &:hover 
+        text-decoration: none 
+        color: #fff
+
+
+
+
+
