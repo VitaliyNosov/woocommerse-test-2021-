@@ -95,7 +95,8 @@
 
 // Кнопка купить товар в магазине WordPress
 
-.product_type_external
+.product_type_external,
+.product_type_grouped
     width: 70%
     min-height: 40px
     margin-top: 20px
@@ -111,6 +112,39 @@
     &:hover 
         text-decoration: none 
         color: #fff
+
+
+// Навигация
+
+.woocommerce-pagination
+    display: flex
+    justify-content: center
+
+.page-numbers
+    display: flex
+    li 
+        span
+            width: 35px
+            height: 35px
+            margin-right: 10px
+            display: flex
+            justify-content: center
+            align-items: center
+            border: 1px solid #71B738
+        a 
+            width: 35px
+            height: 35px
+            margin-right: 10px
+            display: flex
+            justify-content: center
+            align-items: center
+            border: 1px solid #71B738
+            color: #71B738
+
+.current 
+    color: #AB304A 
+
+
 
 
 
