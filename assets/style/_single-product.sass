@@ -1,0 +1,116 @@
+// Общий блок карточки товара
+
+.woocommerce-product-gallery__image 
+    // border: 1px solid red
+
+// Блок товара     
+
+.type-product
+    position: relative
+
+// Блок с основной онформацией, название, колличесиво, кнопка, описание
+
+.summary
+    position: absolute
+    display: flex
+    justify-content: flex-start
+    flex-wrap: wrap
+    width: 40%
+    top: 7%
+    right: 2%
+    // border: 1px solid red
+    del 
+        text-align: left
+    ins 
+        text-align: left
+    .amount 
+        text-align: left
+
+
+.cart 
+    width: 100%
+    // border: 1px solid red
+    position: relative
+
+// Выбор колличества товаров
+
+.quantity
+    width: 30%
+    height: 40px
+    overflow: hidden
+    border: 2px solid #71B738
+    // border: 1px solid red
+    position: relative
+
+// Отображение блока вариативного товара
+
+.woocommerce-variation-add-to-cart
+    display: flex
+
+
+// Выбор колличества товаров, кастомизация
+
+.up,.down
+    display: none
+
+.form-control 
+    height: 40px
+    border: none !important 
+    text-align: center
+    color: #71B738 !important
+    font-size: 12px
+    margin: 0px
+    overflow: hidden !important
+
+.minus 
+    width: 30%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 18px !important
+    border: none
+    color: #71B738
+    position: absolute
+    left: 0%
+    z-index: 10
+
+.plus 
+    width: 30%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 18px !important
+    border: none
+    color: #71B738
+    position: absolute
+    right: 0%
+    z-index: 10
+
+// Кнопка купить
+
+.single_add_to_cart_button
+    width: 60%
+    height: 40px
+    position: absolute
+    right: 0%
+    background-color: #71B738
+    color: #fff
+    border: none
+    transition: 0.3s
+    &:hover 
+        text-decoration: none 
+        color: #fff
+        background-color: #42A633
+    &::before
+        font-family: "Font Awesome 5 Free"
+        font-weight: 900
+        content: '\f07a'
+        margin-right: 5px
+
+    
+
+
+
+

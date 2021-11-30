@@ -1,7 +1,28 @@
+// Шапка магазина
+
+.woocommerce-products-header
+    background-color: #fff
+    color: #71B738
+    
+// Отображение колличества    
+
+.woocommerce-result-count
+    color: #AB304A
+
+// Выпадающий список, фильтр товаров по умолчанию
+
+.woocommerce-ordering
+    margin-bottom: 50px
+    select
+        border: none 
+        border: 1px solid #71B738
+        color: #71B738
+        height: 60px
+    
 // Контейнер с товарами
 
 .products
-    border: 1px solid red
+    // border: 1px solid red
     display: flex
     justify-content: space-between
     flex-wrap: wrap
@@ -15,8 +36,9 @@
     margin-bottom: 40px
     padding: 10px
     border-radius: 5px
-    &:hover
-        text-decoration: none
+    a
+        &:hover
+            text-decoration: none
 
 // Изображение товара
 
@@ -24,6 +46,7 @@
     max-width: 100%
     height: 300px
     border-radius: 5px
+    overflow: hidden
 
 // Вывод сообщения: Распродажа
 
@@ -62,19 +85,24 @@
     font-size: 20px
     margin: 10px 0px 10px 0px
     color: black
-  
 
 // Цена
 
 .price
     width: 100%
     display: flex
-    flex-wrap: wrap
-    justify-content: center
+    flex-direction: column
+    text-align: center
+    margin: 0 auto
     margin-bottom: 20px
     font-size: 25px
     font-weight: bold
     color: #AB304A 
+
+// Скидка
+del
+    color: #CCCCCC
+    text-decoration: none
 
 // Кнопка в корзину
 
@@ -89,9 +117,16 @@
     justify-content: center
     align-items: center
     bottom: 2%
+    transition: 0.3s
     &:hover 
         text-decoration: none 
         color: #fff
+        background-color: #42A633
+    &::before
+        font-family: "Font Awesome 5 Free"
+        font-weight: 900
+        content: '\f07a'
+        margin-right: 5px
 
 // Кнопка купить товар в магазине WordPress
 
