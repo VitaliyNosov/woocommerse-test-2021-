@@ -32,7 +32,6 @@
 	<?php woocommerce_2021_post_thumbnail(); ?>
 
 	<div class="container">
-		123
 		<?php
 		the_content(
 			sprintf(

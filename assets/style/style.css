@@ -359,6 +359,129 @@ del {
   margin-right: 5px;
 }
 
+.tinv-wraper a {
+  color: #71B738;
+  font-size: 14px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-size: 18px;
+}
+
+.tinv-wraper a:hover {
+  color: #578C2B;
+}
+
+.tinv-wraper a::before {
+  font-size: 28px !important;
+}
+
+.tinvwl_add_to_wishlist-text {
+  display: none;
+}
+
+.tinvwl-loop-button-wrapper {
+  text-align: center;
+  position: absolute;
+  top: 5%;
+  left: 8%;
+}
+
+.tinv-modal-inner {
+  color: #71B738;
+}
+
+.tinvwl_button_view,
+.tinvwl_button_close {
+  border: none;
+  background-color: #71B738;
+  color: #fff;
+}
+
+.tinvwl_button_view:hover,
+.tinvwl_button_close:hover {
+  background-color: #578C2B;
+}
+
+.entry-header {
+  background-color: #fff;
+  color: #71B738;
+}
+
+.entry-content {
+  color: black;
+}
+
+.entry-title {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  font-size: 26px;
+}
+
+.entry-title::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: '\f004';
+  margin-right: 10px;
+}
+
+.product-stock {
+  color: #71B738;
+}
+
+.product-cb input {
+  width: 20px;
+  height: 20px;
+  font-size: 18px;
+  background-color: #71B738 !important;
+  color: #71B738 !important;
+  border: none !important;
+}
+
+.product-remove button {
+  background-color: #71B738 !important;
+  color: #fff !important;
+}
+
+.product-thumbnail {
+  width: 300px !important;
+}
+
+.product-name a {
+  color: black;
+  font-size: 18px;
+}
+
+.product-action button {
+  border: none;
+  background-color: #71B738;
+  color: #fff;
+}
+
+.tinvwl-input-group-btn button {
+  border: none;
+  background-color: #71B738;
+  color: #fff;
+}
+
+.tinvwl-to-right button {
+  border: none;
+  background-color: #71B738;
+  color: #fff;
+}
+
+.social-buttons ul li a {
+  color: #71B738;
+}
+
+.entry-footer {
+  background-color: #fff;
+  margin-bottom: 100px;
+}
+
+.entry-footer span a {
+  color: #71B738;
+}
+
 ul {
   margin: 0px;
   padding: 0px;
@@ -366,6 +489,10 @@ ul {
 
 li {
   list-style-type: none;
+}
+
+.widget-area {
+  display: none;
 }
 
 .wrapper {
