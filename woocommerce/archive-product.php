@@ -17,7 +17,9 @@
 
 defined( 'ABSPATH' ) || exit;
 
+
 get_header( 'shop' );
+
 
 echo '12347'; 
 
@@ -31,7 +33,9 @@ echo '12347';
 do_action( 'woocommerce_before_main_content' );
 
 ?>
+
 <div class="container">
+
 <header class="woocommerce-products-header">
 	<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 			<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
@@ -47,14 +51,51 @@ do_action( 'woocommerce_before_main_content' );
 	do_action( 'woocommerce_archive_description' );
 	?>
 </header>
+
 </div>
 
 <div class="container">
 
-<?php
+<div class="row">
+
+<div class="col-3">
+	<h1>Фильтр товаров</h1>
+
+	<form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="filter">
+	<?php
+		if( $terms = get_terms( array( 'taxonomy' => 'category', 'orderby' => 'name' ) ) ) : 
+	
+			echo '<select name="categoryfilter"><option value="">Select category...</option>';
+			foreach ( $terms as $term ) :
+				echo '<option value="' . $term->term_id . '">' . $term->name . '</option>'; // ID of the category as the value of an option
+			endforeach;
+			echo '</select>';
+		endif;
+	?>
+	<input type="text" name="price_min" placeholder="Min price" />
+	<input type="text" name="price_max" placeholder="Max price" />
+	<label>
+		<input type="radio" name="date" value="ASC" /> Date: Ascending
+	</label>
+	<label>
+		<input type="radio" name="date" value="DESC" selected="selected" /> Date: Descending
+	</label>
+	<label>
+		<input type="checkbox" name="featured_image" /> Only posts with featured images
+	</label>
+	<button>Apply filter</button>
+	<input type="hidden" name="action" value="myfilter">
+</form>
+<div id="response"></div>
+
+</div>
+
+<div class="col-9">
+
+	<?php
 
 
-if ( woocommerce_product_loop() ) {
+	if ( woocommerce_product_loop() ) {
 
 	/**
 	 * Hook: woocommerce_before_shop_loop.
@@ -80,41 +121,42 @@ if ( woocommerce_product_loop() ) {
 		}
 	}
 
-	woocommerce_product_loop_end();
+		woocommerce_product_loop_end();
 
 	
 
-	/**
-	 * Hook: woocommerce_after_shop_loop.
-	 *
-	 * @hooked woocommerce_pagination - 10
-	 */
-	do_action( 'woocommerce_after_shop_loop' );
-} else {
-	/**
-	 * Hook: woocommerce_no_products_found.
-	 *
-	 * @hooked wc_no_products_found - 10
-	 */
-	do_action( 'woocommerce_no_products_found' );
-}
+		/**
+			 * Hook: woocommerce_after_shop_loop.
+			 *
+			 * @hooked woocommerce_pagination - 10
+			 */
+			do_action( 'woocommerce_after_shop_loop' );
+		} else {
+		/**
+		 * Hook: woocommerce_no_products_found.
+		 *
+		 * @hooked wc_no_products_found - 10
+		 */
+		do_action( 'woocommerce_no_products_found' );
+		}
 
-/**
- * Hook: woocommerce_after_main_content.
- *
- * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
- */
-do_action( 'woocommerce_after_main_content' );
+		/**
+		 * Hook: woocommerce_after_main_content.
+		 *
+		 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
+	 	*/
+		do_action( 'woocommerce_after_main_content' );
 
-/**
- * Hook: woocommerce_sidebar.
- *
- * @hooked woocommerce_get_sidebar - 10
- */
-do_action( 'woocommerce_sidebar' );
+		/**
+		 * Hook: woocommerce_sidebar.
+		 *
+		 * @hooked woocommerce_get_sidebar - 10
+		 */
+		do_action( 'woocommerce_sidebar' );
 
-get_footer( 'shop' );
+		get_footer( 'shop' );
 
-?>
-
+		?>
+		</div>
+	</div>
 </div>

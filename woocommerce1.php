@@ -17,8 +17,9 @@ get_header();
 
 	<div class="container">
 		<div class="row">
+			<!-- <div class="col-2">123</div> -->
 			<div class="col-12">
-				<?php woocommerce_content (); ?>
+      			<?php woocommerce_content(); ?>
 			</div>
 		</div>
 	</div><!-- #main -->
@@ -26,3 +27,4 @@ get_header();
 <?php
 get_sidebar();
 get_footer();
+
