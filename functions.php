@@ -78,7 +78,6 @@ function wordpress_test_2021_scripts() {
 	wp_enqueue_script('scripts', get_template_directory_uri() .'/assets/js/main.js', array('jquery'), null, true);
 	wp_enqueue_script('slick', get_template_directory_uri() .'/assets/js/slick.min.js', array('jquery'), null, true);
 	wp_enqueue_script('woocommerce-scripts', get_template_directory_uri() .'/assets/js/woocommerce-scripts.js', array('jquery'), null, true);
-	wp_enqueue_script('ajax-script', get_template_directory_uri() .'/assets/js/ajax.js', array('jquery'), null, true);
 
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -267,9 +266,6 @@ function mytheme_add_woocommerce_support() {
 add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 
 
-// Поключаем файл фитра товаров
-
-require_once( dirname(__FILE__) . '/cart/filter-categoty.php');
 
 
 

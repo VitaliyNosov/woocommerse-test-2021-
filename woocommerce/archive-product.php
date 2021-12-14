@@ -61,36 +61,21 @@ do_action( 'woocommerce_before_main_content' );
 <div class="col-3">
 	<h1>Фильтр товаров</h1>
 
-	<form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="filter">
-	<?php
-		if( $terms = get_terms( array( 'taxonomy' => 'category', 'orderby' => 'name' ) ) ) : 
-	
-			echo '<select name="categoryfilter"><option value="">Select category...</option>';
-			foreach ( $terms as $term ) :
-				echo '<option value="' . $term->term_id . '">' . $term->name . '</option>'; // ID of the category as the value of an option
-			endforeach;
-			echo '</select>';
-		endif;
-	?>
-	<input type="text" name="price_min" placeholder="Min price" />
-	<input type="text" name="price_max" placeholder="Max price" />
-	<label>
-		<input type="radio" name="date" value="ASC" /> Date: Ascending
-	</label>
-	<label>
-		<input type="radio" name="date" value="DESC" selected="selected" /> Date: Descending
-	</label>
-	<label>
-		<input type="checkbox" name="featured_image" /> Only posts with featured images
-	</label>
-	<button>Apply filter</button>
-	<input type="hidden" name="action" value="myfilter">
-</form>
-<div id="response"></div>
+		<!-- Вывод фильтра товаров по категориям -->
+
+	<?php echo do_shortcode( '[product_filter_tags]' ); ?> 
+
+		<!-- Вывод фильтра товаров по категориям -->
 
 </div>
 
 <div class="col-9">
+
+		<!-- Вывод результат фильтра -->
+
+	<?php echo do_shortcode( '[product_filter_results]' ); ?>
+
+		<!-- Вывод результат фильтра -->
 
 	<?php
 
